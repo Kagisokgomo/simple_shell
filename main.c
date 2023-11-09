@@ -29,7 +29,7 @@ int main(int ac, char **av)
 				_eputs(av[0]);
 				_eputs(av[1]);
 				_eputs(": 0: can't open ");
-				_eputchar(BUFF_FLUSH);
+				_eputchar(BUF_FLUSH);
 				_eputchar('\n');
 				exit(127);
 
@@ -40,6 +40,6 @@ int main(int ac, char **av)
 	}
 	populate_env_list(info);
 	read_history(info);
-	hsh(indo, av);
+	hsh(info, av);
 	return (EXIT_SUCCESS);
 }
