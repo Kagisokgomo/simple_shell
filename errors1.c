@@ -60,7 +60,7 @@ int print_d(int input, int fd)
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
-		_putcharn = _eputchar;
+		_putchar = _eputchar;
 	if (input < 0)
 	{
 		_abs_ = -input;

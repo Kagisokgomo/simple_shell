@@ -125,7 +125,7 @@ int _putsfd(char *str, int fd);
 int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
-char *strcat(char *, char *);
+char *strncat(char *, char *);
 
 char *_strcpy(char *, char *);
 char *_strdup(const char *);

@@ -14,7 +14,7 @@ void _eputs(char *str)
 		return;
 	while (str[i] != '\0')
 	{
-		_eputchat(str[i]);
+		_eputchar(str[i]);
 		i++;
 	}
 }

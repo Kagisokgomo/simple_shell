@@ -8,7 +8,7 @@
  */
 int _myenv(info_t *info)
 {
-	print_list_str(indo->env);
+	print_list_str(info->env);
 	return (0);
 }
 
@@ -41,7 +41,7 @@ char *_getenv(info_t *info, const char *name)
  * connstant function prototype
  * Return: Alwyas 0
  */
-ont _mysetenv(info_t *info)
+int _mysetenv(info_t *info)
 {
 	if (info->argc != 3)
 	{

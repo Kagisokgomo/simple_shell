@@ -41,7 +41,9 @@ int _unsetenv(info_t *info, char *var)
 			info->env_changed = delete_node_at_index(&(info->env), i);
 			i = 0;
 			node = info->env
-				continue;
+				;
+			
+			continue;
 		}
 		node = node->next;
 		i++;
@@ -71,8 +73,8 @@ int _setenv(info_t *info, char *var, char *value)
 	if (!buf)
 		return (1);
 	_strcpy(buf, var);
-	_strcat(buf, "=");
-	_strcat(buf, value);
+	_strncat(buf, "=");
+	_strncat(buf, value);
 	node = info->env;
 	while (node)
 	{
@@ -88,6 +90,6 @@ int _setenv(info_t *info, char *var, char *value)
 	}
 	add_node_end(&(info->env), buf, 0);
 	free(buf);
-	onfo->env_changed = 1;
+	info->env_changed = 1;
 	return (0);
 }
